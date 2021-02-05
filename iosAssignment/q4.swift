@@ -1,4 +1,26 @@
-//
+//Create a class called Polygon, this class will have:
+//a. Properties:
+//  i. number of sides
+//  ii. Interior angles
+//  iii. sideLength
+//b. Method
+//  i. printNumOfSides(), this will print to the console how many sides the polygon has
+//  ii. printInteriorAngle(), this will print the interior angle value
+//  iii. interiorAngle(), this will calculate the interior angles and set it to the interior
+//angles property (google the equation)
+//NOTE: all polygon will be regular meaning they all have the same side length and all interior angles
+//are the same:
+//Create another class named Triangle that inherits from Polygon. This class will have to:
+//a. Properties:
+//  i. area
+//  ii. perimeter
+//b. Method
+//  i. getSideLength()
+//  ii. setSideLength(length: Int)
+//  iii. printArea()
+//  iv. calculateArea(), this method will use the side lengths to calculate the area of the
+//triangle.
+
 //  q4.swift
 //  iosAssignment
 //
@@ -18,12 +40,12 @@ class Polygon {
     }
     
     func printNumOfSides() {
-        print("Polygon has \(String(describing: numberOfSides)) sides.")
+        print("This Polygon has \(String(describing: numberOfSides)) sides.")
     }
     
     func printInteriorAngle() {
         interiorAngle()
-        print("Polygon has \(String(describing: interiorAngles)) degrees interior angle")
+        print("The Polygon has \(interiorAngles!) degrees interior angle")
     }
     
     func interiorAngle() {
@@ -31,6 +53,7 @@ class Polygon {
         self.interiorAngles = totalInteriorAngle/numberOfSides
     }
 }
+
 
 class Triangle : Polygon {
     var area: Int?
@@ -54,6 +77,6 @@ class Triangle : Polygon {
     
     func printArea() {
         calculateArea()
-        print("Area of triangle is: \(String(describing: self.area))")
+        print("The Area of triangle with \(sideLength) sidelength is: \(area!)")
     }
 }
